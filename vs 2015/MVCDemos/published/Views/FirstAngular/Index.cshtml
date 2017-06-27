@@ -1,0 +1,33 @@
+﻿<html ng-app="appModule">
+
+<head>
+    <title>Satyaprakash Angularjs Introduction</title>
+</head>
+
+<body>
+    <div style="font-family:Arial Black;">
+        <h2 style="background-color: Yellow;color: Blue; text-align: center; font-style: oblique">INTRODUCTION TO ANGULARJS</h2>
+        <fieldset>
+            <legend style="font-family:Arial Black;color:orangered">First Angular Test Page</legend>
+            <div ng-controller="appController">
+                <div style="color:blue">
+                    Name : {{ Profile.Name }}
+                </div>
+                <div style="color:green">
+                    Site Url : {{ Profile.Site }}
+                </div>
+                <div>
+                    <img src="{{Profile.Flair}}"
+                        alt="{{ Profile.Name + ' Flair' }}"
+                        style="height:60px; width:300px" />
+                </div>
+            </div>
+        </fieldset>
+    </div>
+    <footer>
+        <p style="background-color: Yellow; font-weight: bold; color:blue; text-align: center; font-style: oblique">© @DateTime.Now.ToLocalTime()</p> @*Add Date Time*@
+    </footer>
+    <script src="~/Scripts/angular.min.js"></script>
+    <script src="~/Scripts/firstAngular.js"></script>
+</body>
+</html>   

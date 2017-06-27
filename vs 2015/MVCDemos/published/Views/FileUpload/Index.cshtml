@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Multiple File Upload using AngularJs and MVC";
+}
+<h3>Multiple File Upload using AngularJs and MVC</h3>
+<br />
+<br />
+<div ng-app="AgApp">
+    <div ng-controller="ImageUploadMultipleCtrl">
+        <div class="row">
+            <div class="col-md-3">
+                Input Files:
+            </div>
+            <div class="col-md-5" style="text-align:center;margin-bottom:10px;">
+                <input type="file" id="file" name="file"
+                       multiple
+                       onchange="angular.element(this).scope().setFile(this)"
+                       accept="image/*" class="btn btn-primary" />
+            </div>
+            <div class="col-md-4">
+                <button ng-click="UploadFile()" class="button button4">Upload</button>
+                <button ng-click="clearFiles()" class="button button4">Clear</button>
+            </div>
+        </div>
+        <div class="col-md-12" style="padding-top:10px;" ng-show="isTableVisible">
+            <h4>File Upload Status</h4>
+            <br />
+            <div>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>File Name</th>
+                            <th>File Type</th>
+                            <th>File Size</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="file in fileList">
+                            <td>{{file.file.name}}</td>
+                            <td>{{file.file.type}}</td>
+                            <td>{{file.file.size}}</td>
+                            <td>
+                                <div id="{{'P'+$index}}">
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/scripts/MultipleFileUploadAngular/Module.js"></script>
+    <script src="~/scripts/MultipleFileUploadAngular/ImageUploadMultipleController.js"></script>
+}

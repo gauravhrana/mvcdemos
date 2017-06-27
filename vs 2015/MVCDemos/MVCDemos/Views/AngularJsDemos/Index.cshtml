@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "First AngularJs Demo Page";
+}
+<div ng-app="appModule">
+    <h2>AngularJs Hello World!!</h2>
+    <fieldset>
+        <legend>First Angular Test Page</legend>
+        <div ng-controller="appController">
+            <div style="color:blue">
+                Name : {{ Profile.Name }}
+            </div>
+            <div style="color:green">
+                Site Url : <a ng-href="{{Profile.Site}}" target="_blank">{{Profile.Site}}</a>
+            </div>
+        </div>
+    </fieldset>
+</div>
+@section scripts{
+    <script src="~/scripts/angular.min.js"></script>
+    <script src="~/Scripts/app/firstAngular.js"></script>
+}

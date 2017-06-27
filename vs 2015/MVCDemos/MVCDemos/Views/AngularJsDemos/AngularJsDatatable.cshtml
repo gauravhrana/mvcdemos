@@ -1,0 +1,29 @@
+﻿
+@{
+    ViewBag.Title = "AngularJsDatatable";
+}
+
+<h2>AngularJsDatatable</h2>
+<div ng-app="angularJsDatatable">
+
+    <div ui-view></div>
+</div>
+@section styles{
+
+    <link href="~/scripts/datatables/media/css/dataTables.jqueryui.min.css" rel="stylesheet" />
+    <link href="~/scripts/datatables/media/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <script src="~/scripts/datatables/media/js/jquery.dataTables.js"></script>
+}
+@section scripts{
+    <script src="~/scripts/angular.min.js"></script>
+    <script src="~/scripts/angular-ui-router/release/angular-ui-router.min.js"></script>
+    @*<script src="https://code.angularjs.org/1.6.4/angular-route.js"></script>*@
+
+    <script src="~/scripts/datatables/media/js/jquery.dataTables.js"></script>
+    <script src="~/scripts/angular-datatables/dist/angular-datatables.js"></script>
+
+    <script src="~/Scripts/app/AngularJsDataTable/App.module.js"></script>
+    <script src="~/Scripts/app/AngularJsDataTable/App.config.js"></script>
+    <script src="~/Scripts/app/AngularJsDataTable/BookController.js"></script>
+
+}

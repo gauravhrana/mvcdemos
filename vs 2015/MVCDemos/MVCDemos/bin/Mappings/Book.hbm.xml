@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                   assembly="MVCDemos"
+                   namespace="MVCDemos.Models">
+
+  <class name="Book" table="BookMaster">
+    <id name="BookId" column="BookId" type="int">
+      <generator class="native" />
+    </id>
+
+    <property name="BookCode"  />
+    <property name="BookName" />
+    <property name="BookDesc" />
+    <property name="BookAuthor" />
+  </class>
+
+</hibernate-mapping>
